@@ -1,0 +1,49 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Events processed",
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "targets": [{ "expr": "sum(ratescope_events_processed_total)", "refId": "A" }]
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Invalid events",
+      "gridPos": { "h": 4, "w": 6, "x": 6, "y": 0 },
+      "targets": [{ "expr": "sum(ratescope_events_invalid_total)", "refId": "A" }]
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Processing latency",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "targets": [{ "expr": "rate(ratescope_processing_latency_seconds_sum[1m])", "refId": "A" }]
+    },
+    {
+      "id": 4,
+      "type": "stat",
+      "title": "DLQ count",
+      "gridPos": { "h": 4, "w": 6, "x": 12, "y": 0 },
+      "targets": [{ "expr": "ratescope_dlq_count", "refId": "A" }]
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Consumer lag",
+      "gridPos": { "h": 4, "w": 6, "x": 18, "y": 0 },
+      "targets": [{ "expr": "ratescope_consumer_lag", "refId": "A" }]
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["ratescope"],
+  "title": "RateScope Pipeline",
+  "uid": "ratescope-pipeline",
+  "version": 1
+}
