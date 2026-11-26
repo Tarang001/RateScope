@@ -35,8 +35,6 @@ npm run dev
 | API | http://localhost:8000 |
 | API docs | http://localhost:8000/docs |
 
-**Demo API key:** `ratescope-demo-key` (header `X-API-Key`; the dashboard sends it automatically).
-
 The API uses SQLite by default, seeds hotels, and runs an in-process supplier simulator so the UI has real rates, alerts, and charts.
 
 ## Docker (optional full stack)
